@@ -24,7 +24,7 @@ const pool = new Pool({connectionString: connectionString});
       }
       // Log this to the console for debugging purposes.
       console.log("Back from DB with result:");
-      console.log(result.rows);
+      console.log(result);
     }); 
     res.render("pages/index");
   });  
