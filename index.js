@@ -13,12 +13,13 @@ const pool = new Pool({connectionString: connectionString});
   app.set("view engine", "ejs");
 
   app.get("/", function(req, res) {
+    
     var sql = "SELECT * FROM meat";
 
     pool.query(sql, function(err, result) {
       // If an error occurred...
       if (err) {
-          console.log("Error in query: ")
+          console.log("Error in query: ");
           console.log(err);
       }
       // Log this to the console for debugging purposes.
