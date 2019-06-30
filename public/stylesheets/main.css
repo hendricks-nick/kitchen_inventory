@@ -23,3 +23,8 @@ body, html {
   grid-template-rows: auto;
   overflow: hidden;
 }
+
+.navOptions img {
+  height: 80px;
+  width: auto;
+}
