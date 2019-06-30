@@ -16,3 +16,10 @@ body, html {
   height: 200px;
   width: auto;
 }
+
+.navOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  overflow: hidden;
+}
