@@ -1,13 +1,18 @@
-* {
-  margin: none;
-
-}
-
-html {
+body, html {
+  margin:0;
+  padding:0;
   background-color: #394447;
   color: white;
 }
 
-h1 {
-  text-align: center;
+.navContainer {
+  display: grid;
+  grid-template-columns: 65px 1fr 1fr 1fr 1fr 65px;
+  grid-template-rows: auto;
+  overflow: hidden;
+}
+
+.navContainer > img {
+  height: 200px;
+  width: auto;
 }
