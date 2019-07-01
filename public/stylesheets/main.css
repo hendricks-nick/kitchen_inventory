@@ -26,9 +26,16 @@ body, html {
 
 .navOptions img {
   align-content: start;
-  justify-content: center;
   height: 50px;
   width: auto;
+}
+
+.add {
+  justify-self: start;
+}
+
+.search{
+  justify-self: end;
 }
 
 .bodyOptions {
