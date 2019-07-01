@@ -23,18 +23,17 @@ body, html {
   grid-template-rows: auto;
   overflow: hidden;
 }
+.navOptions img {
+  height: 50px;
+  width: auto;
+}
 .add {
   align-content: start;
-  height: 50px;
-  width: auto;
-  justify-self: start;
+  justify-content: start;
 }
-
 .search {
   align-content: start;
-  height: 50px;
-  width: auto;
-  justify-self: end;
+  justify-content: end;
 }
 
 .bodyOptions {
