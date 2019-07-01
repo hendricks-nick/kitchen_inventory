@@ -44,6 +44,7 @@ function getByLocation (req, res) {
 }
 
 module.exports = {
+    getDefault: getDefault,
     getAll: getAll,
     getMeat: getMeat,
     getByName: getByName
