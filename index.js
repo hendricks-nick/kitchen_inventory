@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Connect to controller
-const invController = require("./controllers/invController.js");
+const invController = require("./controllers/invControllers.js");
 
 // Generate pool for DB connection
 const { Pool } = require("pg");
