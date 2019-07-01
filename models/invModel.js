@@ -7,9 +7,10 @@ function getByName(name, callback) {
     callback(results);
 }
 
-function getMeat(callback) {
-  //  DB query
-  var sql = "SELECT * FROM meat";
+function getItemsByType(itemType, callback) {
+  
+   // DB query
+  var sql = "SELECT * FROM " + itemType;
 
   // Query to DB
   pool.query(sql, function(err, results) {
@@ -26,6 +27,6 @@ function getMeat(callback) {
 
 module.exports = {
     getAll: getAll,
-    getMeat: getMeat,
+    getItemsByType: getItemsByType,
     getByName: getByName
 }

@@ -17,27 +17,15 @@ function getByName(req, res) {
     });
 }
 
-function getMeat (req, res) {
-    invModel.getMeat(function(err, results){
-        res.render(results);
+function getItemsByType (req, res) {
+
+    var itemType = req.query.itemType;
+
+    invModel.getItemsByType(itemType, function(err, results){
+        res.json(results);
     });
 }
 
-function getProduce (req, res) {
-
-}
-
-function getGrain (req, res) {
-    
-}
-
-function getDairy (req, res) {
-    
-}
-
-function getOther (req, res) {
-    
-}
 
 function getByLocation (req, res) {
 
@@ -46,6 +34,6 @@ function getByLocation (req, res) {
 module.exports = {
     getDefault: getDefault,
     getAll: getAll,
-    getMeat: getMeat,
+    getItemsByType: getItemsByType,
     getByName: getByName
 }
