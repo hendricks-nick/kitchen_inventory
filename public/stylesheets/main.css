@@ -23,19 +23,23 @@ body, html {
   grid-template-rows: auto;
   overflow: hidden;
 }
-.navOptions img {
-  height: 50px;
-  width: auto;
-}
+
 .add {
   align-content: start;
   justify-content: start;
+}
+.add img {
+  height: 50px;
+  width: auto;
 }
 .search {
   align-content: start;
   justify-content: end;
 }
-
+.search img {
+  height: 50px;
+  width: auto;
+}
 .bodyOptions {
   display: grid;
   grid-template-columns: 65px 1fr 1fr 1fr 1fr 1fr 1fr 65px;
