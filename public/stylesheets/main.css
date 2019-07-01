@@ -27,14 +27,14 @@ body, html {
   align-content: start;
   height: 50px;
   width: auto;
-  justify-content: start;
+  justify-self: start;
 }
 
-.search{
+.search {
   align-content: start;
   height: 50px;
   width: auto;
-  justify-content: end;
+  justify-self: end;
 }
 
 .bodyOptions {
