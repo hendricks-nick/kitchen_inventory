@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 
 // Express routing for homepage/default page
 app.get("/", invController.getDefault);
-app.get("/items", invController.getItems);
+app.get("/items", invController.getItemsByType);
 app.get("/search/:name", invController.getByName);
 
 // listening - log to HEROKU logs  

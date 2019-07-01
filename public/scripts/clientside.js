@@ -8,7 +8,7 @@ function searchByItem() {
     var itemType = $("#item").val();
     console.log("Item Type: " + itemType);
 
-    $.get("/items", {itemType: itemType}, function*(data){
+    $.get("/items", {itemType: itemType}, function(data){
         console.log("Server query complete.");
         console.log("Data retrieved: " + data);
 
