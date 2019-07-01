@@ -3,6 +3,7 @@ function getAll () {
 }
 
 function getByName(name, callback) {
+    console.log("Searching DB for: " + name)
     callback(results);
 }
 
