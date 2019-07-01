@@ -31,11 +31,11 @@ body, html {
 }
 
 .add {
-  justify-self: start;
+  justify-content: start;
 }
 
 .search{
-  justify-self: end;
+  justify-content: end;
 }
 
 .bodyOptions {
