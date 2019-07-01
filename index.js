@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 
+// Connect to controller
+const invController = require("./controllers/invController.js");
+
 // Generate pool for DB connection
 const { Pool } = require("pg");
 
@@ -15,29 +18,15 @@ const pool = new Pool({connectionString: connectionString});
 
 // Set views folder, static pages foler and view engine
 app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
 // Express routing for homepage/default page
-app.get("/", function(req, res) {
-  // Test DB query
-  var sql = "SELECT * FROM meat";
-
-  // query to DB
-  pool.query(sql, function(err, result) {
-    // If an error occurred...
-    if (err) {
-        console.log("Error in query: ");
-        console.log(err);
-    }
-    // Log this to the console for debugging purposes. Goes to HEROKU logs.
-    console.log("Back from DB with result:");
-    console.log(result.rows);
-  }); 
-  
-  // display index page
-  res.render("pages/index");
-});
+app.get("/", invController.getDefault);
+app.get("/meat", invController.getMeat);
+app.get("/search/:name", invController.getByName);
 
 // listening - log to HEROKU logs  
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));

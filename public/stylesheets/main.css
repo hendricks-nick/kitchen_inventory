@@ -25,6 +25,17 @@ body, html {
 }
 
 .navOptions img {
-  height: 80px;
+  align-content: start;
+  justify-content: center;
+  height: 50px;
   width: auto;
+}
+
+.bodyOptions {
+  display: grid;
+  grid-template-columns: 65px 1fr 1fr 1fr 1fr 1fr 1fr 65px;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
 }
