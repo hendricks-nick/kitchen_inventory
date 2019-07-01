@@ -25,7 +25,7 @@ function getItemsByType(itemType, callback) {
   var params = [itemType];
 
   // Query to DB
-  pool.query(sql, function(err, results) {
+  pool.query(sql, params, function(err, results) {
     // If an error occurred...
     if (err) {
         console.log("Error in query: " + err);
