@@ -21,7 +21,8 @@ function getByName(name, callback) {
 function getItemsByType(itemType, callback) {
   
    // DB query
-  var sql = "SELECT * FROM " + itemType;
+  var sql = "SELECT name, qty, other_notes, location_id FROM $1::text";
+  var params = [itemType];
 
   // Query to DB
   pool.query(sql, function(err, results) {
