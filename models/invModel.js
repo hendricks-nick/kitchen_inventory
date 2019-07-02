@@ -38,8 +38,8 @@ function getItemsByType(itemType, callback) {
       success: true,
       list: db_results.rows
     };
+    callback(null, results);
   }); 
-  callback(null, results);
 }
 
 module.exports = {
