@@ -31,7 +31,7 @@ function getItemsByType(itemType, callback) {
         console.log("Error in query: " + err);
     }
     // Log this to the console for debugging purposes. Goes to HEROKU logs.
-    console.log(db_results);
+    console.log(db_results.rows);
 
     var results = {
       success: true,
