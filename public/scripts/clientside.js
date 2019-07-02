@@ -11,7 +11,8 @@ function searchByItem() {
     $.get("/items", {itemType: itemType}, function(data){
         console.log("Server query complete.");
         console.log(data);
-
-
+        
+    $(".bodyOptions").replaceWith("<% include ../partials/test.ejs %>");
+    
     });
 }
