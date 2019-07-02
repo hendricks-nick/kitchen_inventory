@@ -13,7 +13,12 @@ function getByName(req, res) {
     var name = req.params.name;
     
     invModel.getByName(name, function(err, results){
+        if(!err) {
         res.json(results);
+        }
+        else {
+            console.log("Error in getByName - invController: " + err);
+        }
     });
 }
 
@@ -36,4 +41,4 @@ module.exports = {
     getAll: getAll,
     getItemsByType: getItemsByType,
     getByName: getByName
-}
+};
