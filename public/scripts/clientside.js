@@ -11,7 +11,7 @@ function searchByItem() {
     $.get("/items", {itemType: itemType}, function(data){
         console.log("Server query complete.");
         console.log("Data retrieved: " + data);
-        
 
-    })
+
+    });
 }
