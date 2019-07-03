@@ -26,7 +26,7 @@ function searchByItem() {
 
 
        for(var i = 0; i < data.list.length; i++) {
-            $(".bodyOptions").appendTo(
+            $(".bodyOptions").append(
                 "<div></div>" +
                 "<div></div>" +
                 "<div><h2>" + data.list[i].name + "</h2></div>" +
