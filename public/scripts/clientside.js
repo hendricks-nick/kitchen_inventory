@@ -12,10 +12,8 @@ function searchByItem() {
         console.log("Server query complete.");
         console.log(data);
         
-        var arrLength = data.list.length();
 
     $(".bodyOptions").replaceWith(
-        "<div class='bodyOptions'>" +
         "<div></div>" +
         "<div></div>" +
         "<div><h2>Name</h2></div>" +
@@ -23,11 +21,10 @@ function searchByItem() {
         "<div><h2>Location</h2></div>" +
         "<div><h2>Notes</h2></div>" +
         "<div></div>" +
-        "<div></div>"+
-        "</div>");
+        "<div></div>");
 
 
-        for(var i = 0; i < arrLength; i++) {
+        for(var i = 0; i < data.list.length; i++) {
             $(".bodyOptions").appendTo(
                 "<div></div>" +
                 "<div></div>" +
