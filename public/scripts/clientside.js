@@ -2,6 +2,10 @@ function getAll() {
     console.log("Getting All...");   
 }
 
+function backToHome() {
+    $.get("/");
+}
+
 function searchByItem() {
     console.log("Getting List of Items...");  
     
@@ -21,7 +25,7 @@ function searchByItem() {
         '<div><h2>Location</h2></div>' +
         '<div><h2>Notes</h2></div>' +
         '<div></div>' +
-        '<div></div>' +
+        '<div><input type="image" src="/img/back_btn.png" alt="back" id="back" value="back" onclick="backToHome()"></div>' +
         '</div>');
 
 
