@@ -29,10 +29,10 @@ function searchByItem() {
             $(".bodyOptions").appendTo(
                 "<div></div>" +
                 "<div></div>" +
-                "<div><h2>" + data.list.name[i] + "</h2></div>" +
-                "<div><h2>" + data.list.qty[i] + "</h2></div>" +
-                "<div><h2>" + data.list.location_id[i] + "</h2></div>" +
-                "<div><h2>" + data.list.other_notes[i] + "</h2></div>" +
+                "<div><h2>" + data.list[i].name + "</h2></div>" +
+                "<div><h2>" + data.list[i].qty + "</h2></div>" +
+                "<div><h2>" + data.list[i].location_id + "</h2></div>" +
+                "<div><h2>" + data.list[i].other_notes + "</h2></div>" +
                 "<div></div>" +
                 "<div></div>");
         }
