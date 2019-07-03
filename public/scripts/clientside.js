@@ -24,7 +24,7 @@ function searchByItem() {
         '<div><h2>Quantity</h2></div>' +
         '<div><h2>Location</h2></div>' +
         '<div><h2>Notes</h2></div>' +
-        '<div><input type="image" src="/img/back_btn.png" alt="back" id="back" value="back" onclick="backToHome()"></div>' +
+        '<div><a href="../"><img src="/img/back_btn.png" title="Back" alt="back"></a></div>' +
         '<div></div>' +
         '</div>');
 
