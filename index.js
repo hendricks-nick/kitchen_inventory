@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-// Express routing for homepage/default page
+// Express routing for pages
 app.get("/", invController.getDefault);
 app.get("/items", invController.getItemsByType);
 app.get("/search/:name", invController.getByName);

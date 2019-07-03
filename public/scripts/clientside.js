@@ -3,7 +3,7 @@ function getAll() {
 }
 
 function backToHome() {
-    $.get("/");
+    $.get("/", function(){});
 }
 
 function searchByItem() {
@@ -24,8 +24,8 @@ function searchByItem() {
         '<div><h2>Quantity</h2></div>' +
         '<div><h2>Location</h2></div>' +
         '<div><h2>Notes</h2></div>' +
-        '<div></div>' +
         '<div><input type="image" src="/img/back_btn.png" alt="back" id="back" value="back" onclick="backToHome()"></div>' +
+        '<div></div>' +
         '</div>');
 
 
