@@ -1,6 +1,6 @@
 const invModel = require("../models/invModel.js");
 
-function getDefault(red, res) {
+function getDefault(req, res) {
     // display index page
     res.render("pages/index");
 }

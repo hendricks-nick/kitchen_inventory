@@ -3,7 +3,17 @@ function getAll() {
 }
 
 function backToHome() {
-    $.get("/", function(){});
+    $(".bodyOptions").replaceWith(
+        '<div class="bodyOptions">' +
+        '<div></div>' +
+        '<div><input type="image" src="/img/all_btn.png" alt="all" id="all" onclick="getAll()"></div>' +
+        '<div><input type="image" src="/img/meat_btn.png" alt="meat" id="item" value="meat" onclick="searchByItem()"></div>' +
+        '<div><input type="image" src="/img/produce_btn.png" alt="produce" id="item" value="produce" onclick="searchByItem()"></div>' +
+        '<div><input type="image" src="/img/dairy_btn.png" alt="dairy" id="item" value="dairy" onclick="searchByItem()"></div>' +
+        '<div><input type="image" src="/img/grain_btn.png" alt="grain" id="item" value="grain" onclick="searchByItem()"></div>' +
+        '<div><input type="image" src="/img/other_btn.png" alt="other" id="item" value="other" onclick="searchByItem()"></div>' +
+        '<div></div>' +
+        '</div>');
 }
 
 function searchByItem() {
@@ -24,7 +34,7 @@ function searchByItem() {
         '<div><h2>Quantity</h2></div>' +
         '<div><h2>Location</h2></div>' +
         '<div><h2>Notes</h2></div>' +
-        '<div><a href="../"><img src="/img/back_btn.png" title="Back" alt="back"></a></div>' +
+        '<div><input type="image" src="/img/back_btn.png" alt="back" onclick="searchByItem()">></div>' +
         '<div></div>' +
         '</div>');
 
