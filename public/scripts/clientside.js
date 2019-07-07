@@ -36,7 +36,7 @@ function addItem () {
             '<h3>Item Quantity</h3>' +
             '<input type="text" id="qty" name="qty" placeholder="Quantity (2 lbs, 3 dozen, etc...)">' +
             '<h3>Notes</h3>' +
-            '<textarea name="other_notes" placeholder="Add notes here, such as expiration..."rows="10" cols="30"></textarea>' +
+            '<textarea name="other_notes" placeholder="Add notes here, such as expiration..." rows="10" cols="auto"></textarea>' +
             '<h3>Location</h3>' +
             '<select id="location" name="location_id" placeholder="Select the item location..">' +
                 '<option value="1">Pantry</option>' +
