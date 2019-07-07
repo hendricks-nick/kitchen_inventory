@@ -15,10 +15,11 @@ app.use(express.urlencoded({extended:true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-// Express routing for pages
+// Express routing for pages requests
 app.get("/", invController.getDefault);
 app.get("/items", invController.getItemsByType);
 app.get("/search/:name", invController.getByName);
+app.post("/addItem", invController.postAddItem);
 
 // listening - log to HEROKU logs  
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
