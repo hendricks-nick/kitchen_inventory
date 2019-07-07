@@ -16,6 +16,44 @@ function backToHome() {
         '</div>');
 }
 
+function addItem () {
+    $(".bodyOptions").replaceWith(
+        '<div class="itemForm">' +
+        '<div></div>' +
+        '<div></div>' +
+        '<div>' +
+        '<form action="/addItem" method="post">' +
+            '<h3>Item</h3>' +
+            '<input type="text" id="name" name="name" placeholder="Item Name">' +
+            '<h3>Item Type</h3>' +
+            '<select id="type" name="type" placeholder"Select an item type">' +
+                '<option value="meat">Meat</option>' +
+                '<option value="produce">Produce</option>' +
+                '<option value="dairy">Dairy</option>' +
+                '<option value="grain">Grain</option>' +
+                '<option value="other">Other</option>' +
+            '</select>' +
+            '<h3>Item Quantity</h3>' +
+            '<input type="text" id="qty" name="qty" placeholder="Quantity (2 lbs, 3 dozen, etc...)">' +
+            '<h3>Notes</h3>' +
+            '<textarea name="other_notes" placeholder="Add notes here, such as expiration..."rows="10" cols="30"></textarea>' +
+            '<h3>Location</h3>' +
+            '<select id="location" name="location_id" placeholder="Select the item location..">' +
+                '<option value="1">Pantry</option>' +
+                '<option value="2">Kitchen Fridge</option>' +
+                '<option value="3">Kitchen Freezer</option>' +
+                '<option value="4">Garage Fridge</option>' +
+                '<option value="5">Garage Freezer</option>' +
+                '<option value="6">Food Storage</option>' +
+            '</select>' +
+            '<input type="submit" value="Add Item">' +
+        '</form>' +
+        '</div>' +
+        '<div></div>' +
+        '<div></div>' +
+        '</div>');
+
+}
 function searchByItem() {
     console.log("Getting List of Items...");  
     
