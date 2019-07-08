@@ -29,8 +29,9 @@ function getItemsByType(itemType, callback) {
     // If an error occurred...
     if (err) {
         console.log("Error in query: " + err);
+        callback(err);
     }
-    // Log this to the console for debugging purposes. Goes to HEROKU logs.
+    else {// Log this to the console for debugging purposes. Goes to HEROKU logs.
     console.log(db_results.rows);
 
     var results = {
@@ -38,6 +39,8 @@ function getItemsByType(itemType, callback) {
       list: db_results.rows
     };
     callback(null, results);
+  }
+
   }); 
 }
 
