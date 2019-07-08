@@ -64,7 +64,6 @@ function getByLocation (req, res) {
  * purpose: Adds items to the database
  ************************************/
 function postAddItem (req, red) {
-    var
 }
 
 // exports the functions so that they can be access in index.js when required there
