@@ -54,10 +54,10 @@ function addItem () {
         '</div>');
 
 }
-function searchByItem() {
+function searchByItem(item) {
     console.log("Getting List of Items...");  
     
-    var itemType = $("#item").val();
+    var itemType = item;
     console.log("Item Type: " + itemType);
 
     $.get("/items", {itemType: itemType}, function(data){
