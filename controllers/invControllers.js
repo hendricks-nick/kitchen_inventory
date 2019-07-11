@@ -65,11 +65,11 @@ function getByLocation (req, res) {
  ************************************/
 function setAddItem (req, res) {
     console.log("Form posted received:");
-    console.log("Name: " + req.params('name'));
-    console.log("Type: " + req.params('type'));
-    console.log("Quantity: " + req.params('qty'));
-    console.log("Notes: " + req.params('notes'));
-    console.log("Location: " + req.params('location'));
+    console.log("Name: " + req.param('name'));
+    console.log("Type: " + req.param('type'));
+    console.log("Quantity: " + req.param('qty'));
+    console.log("Notes: " + req.param('notes'));
+    console.log("Location: " + req.param('location'));
 }
 
 // exports the functions so that they can be access in index.js when required there
