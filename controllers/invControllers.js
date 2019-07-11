@@ -60,10 +60,16 @@ function getByLocation (req, res) {
 }
 
 /************************************
- * name: POSTADDITEM
+ * name: setADDITEM
  * purpose: Adds items to the database
  ************************************/
-function postAddItem (req, red) {
+function setAddItem (req, res) {
+    console.log("Form posted received:");
+    console.log("Name: " + req.params('name'));
+    console.log("Type: " + req.params('type'));
+    console.log("Quantity: " + req.params('qty'));
+    console.log("Notes: " + req.params('notes'));
+    console.log("Location: " + req.params('location'));
 }
 
 // exports the functions so that they can be access in index.js when required there
@@ -73,5 +79,5 @@ module.exports = {
     getItemsByType: getItemsByType,
     getByName: getByName,
     getByLocation: getByLocation,
-    postAddItem: postAddItem
+    setAddItem: setAddItem
 };
