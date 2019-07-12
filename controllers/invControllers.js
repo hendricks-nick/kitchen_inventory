@@ -63,13 +63,23 @@ function getByLocation (req, res) {
  * name: setADDITEM
  * purpose: Adds items to the database
  ************************************/
-function setAddItem (req, res) {
+function addItemToDB (req, res) {
     console.log("Form posted received:");
-    console.log("Name: " + req.param('name'));
-    console.log("Type: " + req.param('type'));
-    console.log("Quantity: " + req.param('qty'));
-    console.log("Notes: " + req.param('notes'));
-    console.log("Location: " + req.param('location'));
+    console.log("Name: " + req.query.name);
+    console.log("Type: " + req.query.type);
+    console.log("Quantity: " + req.query.qty);
+    console.log("Notes: " + req.query.notes);
+    console.log("Location: " + req.query.location);
+
+    var name = req.query.name;
+    var type = req.query.type;
+    var qty = req.query.qty;
+    var notes = req.query.notes;
+    var location = req.query.location;
+
+    invModel.addItemToDB(name, type, qty, notes, location, function(results){
+        res.json(results);
+    });
 }
 
 // exports the functions so that they can be access in index.js when required there
@@ -79,5 +89,5 @@ module.exports = {
     getItemsByType: getItemsByType,
     getByName: getByName,
     getByLocation: getByLocation,
-    setAddItem: setAddItem
+    addItemToDB: addItemToDB
 };

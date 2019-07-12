@@ -16,13 +16,13 @@ function backToHome() {
         '</div>');
 }
 
-function addItem () {
+function addItemForm () {
     $(".bodyOptions").replaceWith(
         '<div class="itemForm">' +
         '<div></div>' +
         '<div></div>' +
         '<div>' +
-        '<form action="/addItem" method="post">' +
+        '<form onsubmit="addItem()">' +
             '<h3>Item</h3>' +
             '<input type="text" id="name" name="name" placeholder="Item Name">' +
             '<h3>Item Type</h3>' +
@@ -30,13 +30,13 @@ function addItem () {
                 '<option value="meat">Meat</option>' +
                 '<option value="produce">Produce</option>' +
                 '<option value="dairy">Dairy</option>' +
-                '<option value="grain">Grain</option>' +
+                '<option value="grains">Grain</option>' +
                 '<option value="other">Other</option>' +
             '</select>' +
             '<h3>Item Quantity</h3>' +
-            '<input type="text" id="qty" name="qty" placeholder="Quantity (2 lbs, 3 dozen, etc...)">' +
+            '<input type="text" id="quantity" name="quantity" placeholder="Quantity (2 lbs, 3 dozen, etc...)">' +
             '<h3>Notes</h3>' +
-            '<textarea name="notes" placeholder="Add notes here, such as expiration..." rows="10" cols="auto"></textarea>' +
+            '<textarea id="notes" name="notes" placeholder="Add notes here, such as expiration..." rows="10" cols="auto"></textarea>' +
             '<h3>Location</h3>' +
             '<select id="location" name="location" placeholder="Select the item location..">' +
                 '<option value="1">Pantry</option>' +
@@ -53,6 +53,19 @@ function addItem () {
         '<div></div>' +
         '</div>');
 
+}
+
+function addItem() {
+    console.log("Starting to add item..");
+    var type = document.getElementById("type").value;
+    var name = document.getElementById("name").value;
+    var qty = document.getElementById("qty").value;
+    var notes = document.getElementById("notes").value;
+    var location = document.getElementById("location").value;
+
+    $.post("/addItem", {type: type, name: name, qty: qty, notes: notes, location:location}, function(data){
+        console.log(data);
+    });
 }
 function searchByItem(item) {
     console.log("Getting List of Items...");  

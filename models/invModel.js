@@ -19,7 +19,7 @@ function getByName(name, callback) {
 }
 
 function getItemsByType(itemType, callback) {
-  console.log("Made it here. Searching by: " + itemType);
+  console.log("Made it here. Getting items by: " + itemType);
   
   // DB query
   var sql = "SELECT name, qty, other_notes, location_id FROM " + itemType;
@@ -44,8 +44,30 @@ function getItemsByType(itemType, callback) {
   }); 
 }
 
+function addItemToDB(name, type, qty, notes, location, callback) {
+  var sql = 'INSERT INTO ' + type +'(name, qty, other_notes, location_id) VALUES("' +
+            name + '", "' + qty + '", "' + notes + '", ' + location + ')';
+  pool.query(sql, function(err, db_results){
+    if (err) {
+        console.log("Error in query: " + err);
+        callback(err);
+    }
+    else {// Log this to the console for debugging purposes. Goes to HEROKU logs.
+      console.log(db_results.rows);
+
+      var results = {
+        success: true,
+       list: db_results.rows
+      };
+      callback(null, results);
+    }
+  }); 
+  callback(null, results);
+}
+
 module.exports = {
     getAll: getAll,
     getItemsByType: getItemsByType,
-    getByName: getByName
+    getByName: getByName,
+    addItemToDB: addItemToDB
 };
