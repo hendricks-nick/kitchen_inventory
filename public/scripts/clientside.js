@@ -22,7 +22,7 @@ function addItemForm () {
         '<div></div>' +
         '<div></div>' +
         '<div>' +
-        '<form onsubmit="addItem()">' +
+        '<form>' +
             '<h3>Item</h3>' +
             '<input type="text" id="name" name="name" placeholder="Item Name">' +
             '<h3>Item Type</h3>' +
@@ -46,8 +46,8 @@ function addItemForm () {
                 '<option value="5">Garage Freezer</option>' +
                 '<option value="6">Food Storage</option>' +
             '</select>' +
-            '<input type="submit" value="Add Item">' +
-        '</form>' +
+            '</form>' +
+            '<input type="image" src="/img/add_btn.png" alt="add" onsubmit="addItem()">' +
         '</div>' +
         '<div></div>' +
         '<div></div>' +
