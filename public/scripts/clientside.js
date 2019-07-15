@@ -66,7 +66,7 @@ function addItem() {
 
     console.log("name: " + name);
 
-    $.post("/addItem", {type: type, name: name, qty: qty, notes: notes, location:location}, function(data){
+    $.ajax("/addItem", {type: type, name: name, qty: qty, notes: notes, location:location}, function(data){
         console.log(data);
     });
 }
