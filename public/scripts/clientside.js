@@ -47,7 +47,7 @@ function addItemForm () {
                 '<option value="6">Food Storage</option>' +
             '</select>' +
             '</form>' +
-            '<input type="image" src="/img/add_btn.png" alt="add" onsubmit="addItem()">' +
+            '<input type="image" src="/img/add_btn.png" alt="add" onclick="addItem()">' +
         '</div>' +
         '<div></div>' +
         '<div></div>' +
@@ -62,6 +62,8 @@ function addItem() {
     var qty = document.getElementById("qty").value;
     var notes = document.getElementById("notes").value;
     var location = document.getElementById("location").value;
+
+    console.log("name: " + name);
 
     $.post("/addItem", {type: type, name: name, qty: qty, notes: notes, location:location}, function(data){
         console.log(data);
