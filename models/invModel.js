@@ -63,7 +63,6 @@ function addItemToDB(name, type, qty, notes, location, callback) {
       callback(null, results);
     }
   }); 
-  callback(null, results);
 }
 
 module.exports = {
