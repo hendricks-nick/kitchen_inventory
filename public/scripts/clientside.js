@@ -42,9 +42,10 @@ function addItemForm () {
                 '<option value="1">Pantry</option>' +
                 '<option value="2">Kitchen Fridge</option>' +
                 '<option value="3">Kitchen Freezer</option>' +
-                '<option value="4">Garage Fridge</option>' +
-                '<option value="5">Garage Freezer</option>' +
-                '<option value="6">Food Storage</option>' +
+                '<option value="4">Kitchen Cabinets</option>' +
+                '<option value="5">Garage Fridge</option>' +
+                '<option value="6">Garage Freezer</option>' +
+                '<option value="7">Food Storage</option>' +
             '</select>' +
             '</form>' +
             '<input type="image" src="/img/add_btn.png" alt="add" onclick="addItem()">' +

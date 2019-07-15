@@ -65,18 +65,18 @@ function getByLocation (req, res) {
  ************************************/
 function addItemToDB (req, res) {
     console.log("Form posted received:");
-    console.log("Name: " + req.param('name'));
-    console.log("Type: " + req.query.type);
-    console.log("Quantity: " + req.query.qty);
-    console.log("Notes: " + req.query.notes);
-    console.log("Location: " + req.query.location);
+    console.log("Name: " + req.params.name);
+    console.log("Type: " + req.params.type);
+    console.log("Quantity: " + req.params.qty);
+    console.log("Notes: " + req.params.notes);
+    console.log("Location: " + req.params.location);
 
 
-    var name = req.param('name');
-    var type = req.param('type');
-    var qty = req.param('qty');
-    var notes = req.param('notes');
-    var location = req.param('location');
+    var name = req.params.name;
+    var type = req.params.type;
+    var qty = req.params.qty;
+    var notes = req.params.notes;
+    var location = req.params.location;
 
     invModel.addItemToDB(name, type, qty, notes, location, function(results){
         res.json(results);
