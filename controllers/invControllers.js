@@ -72,11 +72,11 @@ function addItemToDB (req, res) {
     console.log("Location: " + req.params.location);
 
 
-    var name = req.params.name;
-    var type = req.params.type;
-    var qty = req.params.qty;
-    var notes = req.params.notes;
-    var location = req.params.location;
+    var name = req.param("name");
+    var type = req.param("type");
+    var qty = req.param("qty");
+    var notes = req.param("notes");
+    var location = req.param("location");
 
     invModel.addItemToDB(name, type, qty, notes, location, function(results){
         res.json(results);
