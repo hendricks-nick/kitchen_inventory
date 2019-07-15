@@ -59,7 +59,7 @@ function addItem() {
     console.log("Starting to add item..");
     var type = document.getElementById("type").value;
     var name = document.getElementById("name").value;
-    var qty = document.getElementById("qty").value;
+    var qty = document.getElementById("quantity").value;
     var notes = document.getElementById("notes").value;
     var location = document.getElementById("location").value;
 
