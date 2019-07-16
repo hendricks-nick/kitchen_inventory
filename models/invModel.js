@@ -45,10 +45,11 @@ function getItemsByType(itemType, callback) {
 }
 
 function addItemToDB(name, type, qty, notes, location, callback) {
-  var sql = 'INSERT INTO ' + type +'(name, qty, other_notes, location_id) VALUES("' +
-            name + '", "' + qty + '", "' + notes + '", ' + location + ')';
+  const sql = 'INSERT INTO $1(name, qty, other_notes, location_id) values($2, $3, $4, $5)';
+  const values = [type, name, qty, notes, location];
+
   console.log("DB Query: "+ sql);
-  pool.query(sql, function(err, db_results){
+  pool.query(sql, values, function(err, db_results){
     if (err) {
         console.log("Error in query: " + err);
         callback(err);
