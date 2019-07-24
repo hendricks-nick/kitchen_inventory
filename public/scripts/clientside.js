@@ -3,7 +3,7 @@ function getAll() {
 }
 
 function backToHome() {
-    $(".bodyOptions").replaceWith(
+    $(".bodyOptions").replaceWith,(".formComplete").replaceWith(
         '<div class="bodyOptions">' +
         '<div></div>' +
         '<div><input type="image" src="/img/all_btn.png" alt="all" id="all" onclick="getAll()"></div>' +
