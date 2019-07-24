@@ -36,7 +36,7 @@ function addItemForm () {
             '<h3>Item Quantity</h3>' +
             '<input type="text" id="quantity" name="quantity" placeholder="Quantity (2 lbs, 3 dozen, etc...)">' +
             '<h3>Notes</h3>' +
-            '<textarea id="notes" name="notes" placeholder="Add notes here, such as expiration..." rows="10" cols="auto"></textarea>' +
+            '<textarea id="notes" name="notes" placeholder="Add notes here, such as expiration..." rows="10" cols="80"></textarea>' +
             '<h3>Location</h3>' +
             '<select id="location" name="location" placeholder="Select the item location..">' +
                 '<option value="1">Pantry</option>' +
@@ -96,24 +96,25 @@ function searchByItem(item) {
     $(".bodyOptions").replaceWith(
         '<div class="bodyOptions">' +
         '<div></div>' +
-        '<div></div>' +
         '<div><h2>Name</h2></div>' +
         '<div><h2>Quantity</h2></div>' +
         '<div><h2>Location</h2></div>' +
         '<div><h2>Notes</h2></div>' +
+        '<div></div>' +
         '<div><input type="image" src="/img/back_btn.png" alt="back" onclick="backToHome()"></div>' +
         '<div></div>' +
         '</div>');
 
 
+
        for(var i = 0; i < data.list.length; i++) {
             $(".bodyOptions").append(
-                "<div></div>" +
                 "<div></div>" +
                 "<div><h2>" + data.list[i].name + "</h2></div>" +
                 "<div><h2>" + data.list[i].qty + "</h2></div>" +
                 "<div><h2>" + data.list[i].location_id + "</h2></div>" +
                 "<div><h2>" + data.list[i].other_notes + "</h2></div>" +
+                '<div><input type="image" src="/img/delete_btn.png" alt="delete" onclick="deleteItem(' + data.list[i].name +')"></div>' +
                 "<div></div>" +
                 "<div></div>");
         }
