@@ -73,11 +73,11 @@ function addItem() {
             '<div class="formComplete">' +
             '<div></div>' +
             '<div></div>' +
-            '<div>Item Added Sucessfully!</div>' +
+            '<div><h1>Item Added Sucessfully!</h1></div>' +
             '<div></div>' +
             '<div></div>' +
             '<div></div>' +
-            '<div<input type="image" src="/img/ant_btn.png" alt="another" onclick="addItemForm()">></div>' +
+            '<div<input type="image" src="/img/ant_btn.png" alt="another" onclick="addItemForm()"></div>' +
             '<div></div>' +
             '<div><input type="image" src="/img/back_btn.png" alt="back" onclick="backToHome()"></div>' +
             '<div></div>' +
