@@ -48,7 +48,7 @@ function addItemForm () {
                 '<option value="7">Food Storage</option>' +
             '</select>' +
             '</form>' +
-            '<input type="image" src="/img/add_btn.png" alt="add" onclick="addItem()">' +
+            '<input type="image" src="/img/add_btn.png" alt="add" onclick="addItem()"> <input type="image" src="/img/back_btn.png" alt="back" onclick="backToHome()">' +
         '</div>' +
         '<div></div>' +
         '<div></div>' +
@@ -68,6 +68,21 @@ function addItem() {
 
     $.post("/addItem", {type: type, name: name, qty: qty, notes: notes, location:location}, function(data){
         console.log(data);
+        
+        $(".itemForm").replaceWith(
+            '<div class="formComplete">' +
+            '<div></div>' +
+            '<div></div>' +
+            '<div>Item Added Sucessfully!</div>' +
+            '<div></div>' +
+            '<div></div>' +
+            '<div></div>' +
+            '<div<input type="image" src="/img/ant_btn.png" alt="another" onclick="addItemForm()">></div>' +
+            '<div></div>' +
+            '<div><input type="image" src="/img/back_btn.png" alt="back" onclick="backToHome()"></div>' +
+            '<div></div>' +
+            '</div>');
+
     });
 }
 function searchByItem(item) {
