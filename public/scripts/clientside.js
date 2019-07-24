@@ -3,7 +3,7 @@ function getAll() {
 }
 
 function backToHome() {
-    $(".bodyOptions").replaceWith,(".formComplete").replaceWith(
+    $(".bodyOptions").replaceWith(
         '<div class="bodyOptions">' +
         '<div></div>' +
         '<div><input type="image" src="/img/all_btn.png" alt="all" id="all" onclick="getAll()"></div>' +
@@ -70,16 +70,14 @@ function addItem() {
         console.log(data);
         
         $(".itemForm").replaceWith(
-            '<div class="formComplete">' +
+            '<div class="bodyOptions">' +
             '<div></div>' +
             '<div></div>' +
-            '<div><h1>Item Added Sucessfully!</h1></div>' +
+            '<div><input type="image" src="/img/ant_btn.png" alt="another" onclick="addItemForm()"></div>' +
             '<div></div>' +
-            '<div></div>' +
-            '<div></div>' +
-            '<div<input type="image" src="/img/ant_btn.png" alt="another" onclick="addItemForm()"></div>' +
             '<div></div>' +
             '<div><input type="image" src="/img/back_btn.png" alt="back" onclick="backToHome()"></div>' +
+            '<div></div>' +
             '<div></div>' +
             '</div>');
 
