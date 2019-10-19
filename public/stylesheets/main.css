@@ -86,7 +86,7 @@ input[type=submit]:hover {
 @media only screen and (max-width: 600px) {
   .bodyOptions {
     display: grid;
-    grid-template-columns: 65px 1fr 65px;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-content: center;
     align-content: center;
